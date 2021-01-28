@@ -58,10 +58,11 @@ pause.addEventListener('click', function(){
 
     //leave a comment 
 const commentForm = document.getElementById('comment-form')
-const inputComment = document.getElementById('comment-input')
 commentForm.addEventListener('submit', function(e){
     e.preventDefault();
-
+const newComment = document.createElement('li)')
+newComment.innerText = input.Comment.value
+commentForm.appendChild(newComment)
 })
 
 
