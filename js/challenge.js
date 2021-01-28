@@ -3,7 +3,7 @@ const counter = document.getElementById('counter')
 let count = 0
 let number = 1
 
-setInterval(() => {
+let timer = setInterval(() => {
     count ++
     counter.innerText = count;
 
@@ -38,5 +38,21 @@ heart.addEventListener('click', function(){
 
 const pause = document.getElementById('pause')
 pause.addEventListener('click', function(){
-    
+    if (pause.innerText == 'pause'){
+        plus.disabled = true;
+        minus.disabled = true;
+        heart.disabled = true;
+        pause.innerText = 'resume';
+        clearInterval(timer);
+    } else {
+        plus.disabled = false;
+        minus.disabled = false;
+        heart.disabled = false;
+        pause.innerText = 'pause';
+        setInterval(() => {
+            count ++
+            counter.innerText = count;
+        
+        }, 1000);
+    }
 })
