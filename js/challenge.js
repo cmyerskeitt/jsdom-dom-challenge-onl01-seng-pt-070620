@@ -56,13 +56,13 @@ pause.addEventListener('click', function(){
         }, 1000);
     }
 
+})
     //leave a comment 
 const commentForm = document.getElementById('comment-form')
-const inputComment = document.getElementById('comment-input')
 commentForm.addEventListener('submit', function(e){
     e.preventDefault();
-
+const newComment = document.createElement('li')
+ newComment.innerText = e.target.comment.value
+commentForm.appendChild(newComment)
 })
 
-
-})
