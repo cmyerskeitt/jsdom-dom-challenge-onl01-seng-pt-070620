@@ -34,7 +34,7 @@ heart.addEventListener('click', function(){
     likes.appendChild(li)
 })
 
-// pause counter
+// pause/resume counter
 
 const pause = document.getElementById('pause')
 pause.addEventListener('click', function(){
@@ -55,4 +55,14 @@ pause.addEventListener('click', function(){
         
         }, 1000);
     }
+
+    //leave a comment 
+const commentForm = document.getElementById('comment-form')
+const inputComment = document.getElementById('comment-input')
+commentForm.addEventListener('submit', function(e){
+    e.preventDefault();
+
+})
+
+
 })
